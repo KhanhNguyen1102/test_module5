@@ -1,0 +1,27 @@
+<table style="" class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th style="text-align: center" colspan="4" scope="col">Book List</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th colspan="2" scope="row">Total : {{books.length}} books</th>
+    <td style="text-align: right" colspan="2"><button (click)="showFormCreate()" >Add new book</button></td>
+  </tr>
+  <tr>
+    <th scope="row">#</th>
+    <td>Title</td>
+    <td>Author</td>
+    <td>Action</td>
+  </tr>
+  <ng-container *ngFor="let book of books; index as i">
+    <tr>
+      <th scope="row">{{i+1}}</th>
+      <td><span id="bookName" (click)="showDetail(book.id)">{{book.title}}</span></td>
+      <td>{{book.author}}</td>
+      <td><span id="edit" (click)="showFormEdit(book.id)">Edit</span>| <span id="deletebtn" (click)="deleteBook(book.id)">Delete</span></td>
+    </tr>
+  </ng-container>
+  </tbody>
+</table>

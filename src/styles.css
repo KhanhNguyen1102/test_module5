@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+#bookName:hover{
+  color: #59ff00;
+}
+#edit:hover{
+  color: #3edca4;
+}
+#deletebtn:hover{
+  color: #f6082b;
+}
